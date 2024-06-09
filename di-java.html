@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dependency Injection in Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        a {
+            color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dependency Injection in Java</h1>
+    <p>In Java, DI is often used with frameworks like Spring or Google Guice.</p>
+
+    <h2>Example with Spring:</h2>
+    <pre><code>@Component
+public class Repository implements IRepository {
+    public void save() {
+        // Save logic here
+    }
+}
+
+@Service
+public class Service {
+    private final IRepository repository;
+
+    @Autowired
+    public Service(IRepository repository) {
+        this.repository = repository;
+    }
+
+    public void execute() {
+        repository.save();
+    }
+}
+
+// Configuration
+@Configuration
+public class AppConfig {
+    @Bean
+    public IRepository repository() {
+        return new Repository();
+    }
+
+    @Bean
+    public Service service() {
+        return new Service(repository());
+    }
+}
+</code></pre>
+
+    <p><a href="index.html">Back to Main Document</a></p>
+</body>
+</html>
