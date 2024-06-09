@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Injection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        a {
+            color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Constructor Injection</h1>
+    <p>Constructor Injection is a technique where dependencies are provided through a class's constructor. This is the most common and preferred method as it makes the dependencies explicit and the object fully initialized upon creation.</p>
+
+    <h2>Example in C#:</h2>
+    <pre><code>public class Service
+{
+    private readonly IRepository _repository;
+
+    public Service(IRepository repository)
+    {
+        _repository = repository;
+    }
+
+    public void Execute()
+    {
+        _repository.Save();
+    }
+}
+</code></pre>
+
+    <p><a href="index.html">Back to Main Document</a></p>
+</body>
+</html>
