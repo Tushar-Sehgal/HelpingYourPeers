@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Injection</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Interface Injection</h1>
+    </header>
+
+    <div class="container">
+        <p>Interface Injection involves providing dependencies through an interface that the class implements. This method is less common and often considered less flexible.</p>
+
+        <h2>Advantages</h2>
+        <ul>
+            <li>Provides a standard method for injecting dependencies.</li>
+            <li>Ensures that dependencies are provided through a well-defined interface.</li>
+        </ul>
+
+        <h2>Disadvantages</h2>
+        <ul>
+            <li>Less flexible than other methods of dependency injection.</li>
+            <li>Can lead to tight coupling between the service and the dependency.</li>
+        </ul>
+
+        <h2>Example in Java</h2>
+        <pre><code>public interface IService {
+    void setRepository(IRepository repository);
+}
+
+public class Service implements IService {
+    private IRepository repository;
+
+    @Override
+    public void setRepository(IRepository repository) {
+        this.repository = repository;
+    }
+
+    public void execute() {
+        repository.save();
+    }
+}
+</code></pre>
+
+        <p><a href="../index.html">Back to Main Document</a></p>
+    </div>
+
+    <div class="sky">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="bird bird1"></div>
+        <div class="bird bird2"></div>
+    </div>
+</body>
+
+</html>

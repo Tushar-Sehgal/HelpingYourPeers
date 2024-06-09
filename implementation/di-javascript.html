@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dependency Injection in JavaScript</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dependency Injection in JavaScript (Node.js)</h1>
+    </header>
+
+    <div class="container">
+        <p>In Node.js, DI can be implemented using patterns or libraries like InversifyJS. InversifyJS is a powerful and lightweight IoC container for JavaScript applications.</p>
+
+        <h2>Example with InversifyJS</h2>
+        <pre><code>const { Container, injectable, inject } = require("inversify");
+require("reflect-metadata");
+
+@injectable()
+class Repository {
+    save() {
+        console.log("Save logic here");
+    }
+}
+
+@injectable()
+class Service {
+    constructor(@inject("Repository") repository) {
+        this.repository = repository;
+    }
+
+    execute() {
+        this.repository.save();
+    }
+}
+
+const container = new Container();
+container.bind("Repository").to(Repository);
+container.bind("Service").to(Service);
+
+const service = container.get("Service");
+service.execute();
+</code></pre>
+
+        <p><a href="../index.html">Back to Main Document</a></p>
+    </div>
+
+    <div class="sky">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="bird bird1"></div>
+        <div class="bird bird2"></div>
+    </div>
+</body>
+
+</html>

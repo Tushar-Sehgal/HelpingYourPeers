@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dependency Injection in C#</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        a {
-            color: #1a73e8;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
-    <h1>Dependency Injection in C#</h1>
-    <p>In C#, DI is often used with the .NET Core framework, which provides built-in support for DI.</p>
 
-    <h2>Example:</h2>
-    <pre><code>public interface IRepository
+<body>
+    <header>
+        <h1>Dependency Injection in C#</h1>
+    </header>
+
+    <div class="container">
+        <p>In C#, DI is often used with the .NET Core framework, which provides built-in support for DI. .NET Core uses a built-in IoC container to manage dependencies.</p>
+
+        <h2>Example</h2>
+        <pre><code>public interface IRepository
 {
     void Save();
 }
@@ -62,6 +56,15 @@ public class Startup
 }
 </code></pre>
 
-    <p><a href="index.html">Back to Main Document</a></p>
+        <p><a href="../index.html">Back to Main Document</a></p>
+    </div>
+
+    <div class="sky">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="bird bird1"></div>
+        <div class="bird bird2"></div>
+    </div>
 </body>
+
 </html>

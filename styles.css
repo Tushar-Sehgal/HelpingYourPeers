@@ -1,0 +1,203 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #87CEEB, #87CEFA);
+}
+
+header {
+    background: linear-gradient(to bottom, #2980b9, #2c3e50);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.cloud1 {
+    width: 100px;
+    height: 60px;
+    top: 20%;
+    left: 10%;
+}
+
+.cloud1::before {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 10px;
+}
+
+.cloud1::after {
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: 60px;
+}
+
+.cloud2 {
+    width: 80px;
+    height: 50px;
+    top: 40%;
+    left: 70%;
+}
+
+.cloud2::before {
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: -20px;
+}
+
+.cloud2::after {
+    width: 40px;
+    height: 40px;
+    top: -10px;
+    left: 50px;
+}
+
+.bird {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+.bird::before,
+.bird::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+.bird::before {
+    top: -20px;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.bird::after {
+    top: 0;
+    left: -20px;
+    transform: rotate(-45deg);
+}
+
+.bird1 {
+    top: 30%;
+    left: 30%;
+}
+
+.bird2 {
+    top: 60%;
+    left: 80%;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+

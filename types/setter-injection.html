@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setter Injection</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Setter Injection</h1>
+    </header>
+
+    <div class="container">
+        <p>Setter Injection uses setter methods to inject dependencies. This method allows changing dependencies at runtime but can leave the object in an invalid state if dependencies are not set.</p>
+
+        <h2>Advantages</h2>
+        <ul>
+            <li>Provides flexibility to change dependencies after object creation.</li>
+            <li>Can help reduce the complexity of constructors with many parameters.</li>
+        </ul>
+
+        <h2>Disadvantages</h2>
+        <ul>
+            <li>Dependencies can be modified after object creation, potentially leading to inconsistent states.</li>
+            <li>Does not enforce dependency injection, which can lead to objects being used without their dependencies properly set.</li>
+        </ul>
+
+        <h2>Example in Java</h2>
+        <pre><code>public class Service {
+    private IRepository repository;
+
+    public void setRepository(IRepository repository) {
+        this.repository = repository;
+    }
+
+    public void execute() {
+        repository.save();
+    }
+}
+</code></pre>
+
+        <p><a href="../index.html">Back to Main Document</a></p>
+    </div>
+
+    <div class="sky">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="bird bird1"></div>
+        <div class="bird bird2"></div>
+    </div>
+</body>
+
+</html>
