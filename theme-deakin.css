@@ -1,0 +1,370 @@
+@charset "UTF-8";
+@import url("robot.css");
+
+/* General Styles */
+.swagger-ui html {
+    box-sizing: border-box;
+}
+
+.swagger-ui *, .swagger-ui :after, .swagger-ui :before {
+    box-sizing: inherit;
+}
+
+.swagger-ui body {
+    margin: 0;
+    background: #fafafa;
+}
+
+/* Deakin Header */
+.swagger-ui .topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 8px 30px;
+    background-color: #000000;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.4), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+    .swagger-ui .topbar .topbar-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .swagger-ui .topbar a {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-decoration: none;
+        flex: 1;
+        align-items: center;
+        font-family: Titillium Web, sans-serif;
+        color: #fff;
+    }
+
+        .swagger-ui .topbar a span {
+            margin: 0;
+            padding: 0 10px;
+        }
+
+    .swagger-ui .topbar .download-url-wrapper input[type=text] {
+        min-width: 350px;
+        margin: 0;
+        border: 2px solid #DADFE1;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+
+    .swagger-ui .topbar .download-url-wrapper .download-url-button {
+        font-size: 16px;
+        font-weight: 700;
+        padding: 4px 40px;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        background: #ffffff;
+        font-family: Titillium Web, sans-serif;
+        color: #222222;
+    }
+
+/* Opblock Tag Section */
+.swagger-ui .opblock-tag-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.swagger-ui .opblock-tag {
+    display: flex;
+    padding: 10px 20px 10px 10px;
+    cursor: pointer;
+    transition: all .2s;
+    border-bottom: 1px solid rgba(59, 65, 81, .3);
+    align-items: center;
+}
+
+    .swagger-ui .opblock-tag:hover {
+        background: rgba(0, 0, 0, .02);
+    }
+
+.swagger-ui .opblock-tag {
+    font-size: 24px;
+    margin: 0 0 5px;
+    font-family: Titillium Web, sans-serif;
+    color: #3b4151;
+}
+
+    /* Hover effect for Map and RobotCommand */
+    .swagger-ui .opblock-tag:hover .opblock-tag-content {
+        color: #65D8CA;
+        background-color: #000;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+/* Opblock Styles */
+.swagger-ui .opblock {
+    margin: 0 0 15px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .19);
+}
+
+    .swagger-ui .opblock.is-open .opblock-summary {
+        border-bottom: 1px solid #000;
+    }
+
+    .swagger-ui .opblock .opblock-section-header {
+        padding: 8px 20px;
+        background: hsla(0, 0%, 100%, .8);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+        display: flex;
+        align-items: center;
+    }
+
+        .swagger-ui .opblock .opblock-section-header h4 {
+            font-size: 14px;
+            margin: 0;
+            flex: 1;
+            font-family: Titillium Web, sans-serif;
+            color: #3b4151;
+        }
+
+    .swagger-ui .opblock .opblock-summary-method {
+        font-size: 14px;
+        font-weight: 700;
+        min-width: 80px;
+        padding: 6px 15px;
+        text-align: center;
+        border-radius: 3px;
+        background: #000;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+        font-family: Titillium Web, sans-serif;
+        color: #fff;
+    }
+
+    .swagger-ui .opblock .opblock-summary {
+        display: flex;
+        padding: 5px;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .swagger-ui .opblock .opblock-summary-description {
+        font-size: 13px;
+        flex: 1;
+        font-family: Open Sans, sans-serif;
+        color: #3b4151;
+    }
+
+    /* GET, POST, PUT, DELETE, etc. button hover effect */
+    .swagger-ui .opblock.opblock-get:hover .opblock-summary-method,
+    .swagger-ui .opblock.opblock-post:hover .opblock-summary-method,
+    .swagger-ui .opblock.opblock-put:hover .opblock-summary-method,
+    .swagger-ui .opblock.opblock-delete:hover .opblock-summary-method,
+    .swagger-ui .opblock.opblock-patch:hover .opblock-summary-method,
+    .swagger-ui .opblock.opblock-head:hover .opblock-summary-method,
+    .swagger-ui .opblock.opblock-options:hover .opblock-summary-method {
+        color: #65D8CA;
+        background-color: #000;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+/* Link Styles */
+.swagger-ui .info a {
+    font-size: 14px;
+    color: #0B7161;
+    position: relative;
+    padding-left: 25px;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+    .swagger-ui .info a:hover {
+        color: #065a4f;
+    }
+
+    .swagger-ui .info a:before {
+        content: ">";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #0B7161;
+        color: #ffffff;
+        text-align: center;
+        line-height: 16px;
+        font-size: 12px;
+        transition: background-color 0.3s, color 0.3s, border 0.3s;
+    }
+
+    .swagger-ui .info a:hover:before {
+        background-color: #ffffff;
+        color: #0B7161;
+        border: 1px solid #0B7161;
+    }
+
+/* Button Styles */
+.swagger-ui .btn {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 23px;
+    transition: all .3s;
+    border: 2px solid #888;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    font-family: Titillium Web, sans-serif;
+    color: #3b4151;
+}
+
+    .swagger-ui .btn[disabled] {
+        cursor: not-allowed;
+        opacity: .3;
+    }
+
+    .swagger-ui .btn:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    }
+
+    .swagger-ui .btn.authorize {
+        line-height: 1;
+        display: inline;
+        color: #65D8CA;
+        border-color: #65D8CA;
+    }
+
+        .swagger-ui .btn.authorize svg {
+            fill: #65D8CA;
+        }
+
+    .swagger-ui .btn.execute {
+        animation: pulse 2s infinite;
+        color: #fff;
+        border-color: #4990e2;
+    }
+
+@keyframes pulse {
+    0% {
+        color: #fff;
+        background: #4990e2;
+        box-shadow: 0 0 0 0 rgba(73, 144, 226, .8);
+    }
+
+    70% {
+        box-shadow: 0 0 0 5px rgba(73, 144, 226, 0);
+    }
+
+    to {
+        color: #fff;
+        background: #4990e2;
+        box-shadow: 0 0 0 0 rgba(73, 144, 226, 0);
+    }
+}
+
+/* Additional Customizations for Deakin */
+.swagger-ui .opblock.opblock-get {
+    border-color: #65D8CA;
+    background: rgba(101, 216, 202, .1);
+}
+
+    .swagger-ui .opblock.opblock-get .opblock-summary-method {
+        background: #65D8CA;
+    }
+
+.swagger-ui .opblock.opblock-post {
+    border-color: #65D8CA;
+    background: rgba(101, 216, 202, .1);
+}
+
+    .swagger-ui .opblock.opblock-post .opblock-summary-method {
+        background: #65D8CA;
+    }
+
+.swagger-ui .opblock.opblock-put {
+    border-color: #65D8CA;
+    background: rgba(101, 216, 202, .1);
+}
+
+    .swagger-ui .opblock.opblock-put .opblock-summary-method {
+        background: #65D8CA;
+    }
+
+.swagger-ui .opblock.opblock-delete {
+    border-color: #65D8CA;
+    background: rgba(101, 216, 202, .1);
+}
+
+    .swagger-ui .opblock.opblock-delete .opblock-summary-method {
+        background: #65D8CA;
+    }
+
+.swagger-ui .opblock.opblock-patch {
+    border-color: #65D8CA;
+    background: rgba(101, 216, 202, .1);
+}
+
+    .swagger-ui .opblock.opblock-patch .opblock-summary-method {
+        background: #65D8CA;
+    }
+
+.swagger-ui .opblock.opblock-head {
+    border-color: #65D8CA;
+    background: rgba(101, 216, 202, .1);
+}
+
+    .swagger-ui .opblock.opblock-head .opblock-summary-method {
+        background: #65D8CA;
+    }
+
+.swagger-ui .opblock.opblock-options {
+    border-color: #65D8CA;
+    background: rgba(101, 216, 202, .1);
+}
+
+    .swagger-ui .opblock.opblock-options .opblock-summary-method {
+        background: #65D8CA;
+    }
+
+/* Footer */
+.swagger-ui .footer {
+    background-color: #8a8d8f;
+    color: #ffffff;
+}
+
+/* Schema Section */
+.swagger-ui section.models.is-open {
+    background-color: rgba(101, 216, 202, .1); /* Background color consistent with other sections */
+    color: #3b4151; /* Text color consistent with other sections */
+    padding: 20px;
+    margin: 15px 0; /* Add margin consistent with other sections */
+    border: 1px solid #000; /* Border consistent with other sections */
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .19); /* Box shadow consistent with other sections */
+}
+
+    .swagger-ui section.models.is-open h4 {
+        color: #3b4151; /* Text color for schema header */
+        padding-left: 0; /* Remove extra padding */
+    }
+
+    /* Hover effect for schema */
+    .swagger-ui section.models.is-open:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .swagger-ui section.models.is-open:hover h4,
+        .swagger-ui section.models.is-open:hover .model,
+        .swagger-ui section.models.is-open:hover .model-title,
+        .swagger-ui section.models.is-open:hover .property,
+        .swagger-ui section.models.is-open:hover .model-container {
+            color: #65D8CA;
+        }
+
+    .swagger-ui section.models.is-open .model-container {
+        padding: 10px 20px;
+        background: rgba(101, 216, 202, .1); /* Background color for model containers consistent with other sections */
+        color: #3b4151; /* Text color for model containers consistent with other sections */
+        border: none; /* Remove extra border */
+        box-shadow: none; /* Remove extra box shadow */
+    }
