@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dependency Injection (DI)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        a {
+            color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dependency Injection (DI)</h1>
+
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#core-concepts">Core Concepts</a></li>
+        <li><a href="#types">Types of Dependency Injection</a></li>
+        <li><a href="#benefits">Benefits of Dependency Injection</a></li>
+        <li><a href="#implementation">Implementation in Different Languages</a></li>
+        <li><a href="#frameworks">Frameworks and Tools for Dependency Injection</a></li>
+        <li><a href="#challenges">Common Challenges and Solutions</a></li>
+        <li><a href="#practices">Best Practices</a></li>
+        <li><a href="#case-studies">Case Studies and Examples</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+    </ol>
+
+    <h2 id="introduction">1. Introduction</h2>
+    <p>Dependency Injection (DI) is a design pattern used in software development to achieve Inversion of Control (IoC) between classes and their dependencies. This means that rather than a class creating its dependencies, they are injected by an external entity, often referred to as a DI container or framework.</p>
+
+    <p>The primary goal of DI is to reduce the coupling between classes and their dependencies. This leads to more modular, testable, and maintainable code. DI is a cornerstone of modern software architecture, especially in enterprise-level applications.</p>
+
+    <h2 id="core-concepts">2. Core Concepts</h2>
+    <p><strong>Dependency:</strong> A dependency is any object that another object requires. For instance, if a class A uses a class B, then B is a dependency of A.</p>
+    <p><strong>Injection:</strong> Injection refers to the process of providing the dependencies to a class rather than the class creating them itself. This can be done through constructors, setters, or interfaces.</p>
+    <p><strong>Inversion of Control (IoC):</strong> IoC is a broader principle where the control of creating and managing objects is inverted from the application to a container or framework. DI is a specific implementation of IoC.</p>
+
+    <h2 id="types">3. Types of Dependency Injection</h2>
+    <p>There are three primary types of dependency injection:</p>
+    <ul>
+        <li><a href="constructor-injection.html">Constructor Injection</a></li>
+        <li><a href="setter-injection.html">Setter Injection</a></li>
+        <li><a href="interface-injection.html">Interface Injection</a></li>
+    </ul>
+
+    <h2 id="benefits">4. Benefits of Dependency Injection</h2>
+    <p>Dependency Injection offers several benefits:</p>
+    <ul>
+        <li>Decoupling</li>
+        <li>Testability</li>
+        <li>Maintainability</li>
+        <li>Scalability</li>
+    </ul>
+
+    <h2 id="implementation">5. Implementation in Different Languages</h2>
+    <p>DI can be implemented in various programming languages. Here are some examples:</p>
+    <ul>
+        <li><a href="di-csharp.html">Dependency Injection in C#</a></li>
+        <li><a href="di-java.html">Dependency Injection in Java</a></li>
+        <li><a href="di-python.html">Dependency Injection in Python</a></li>
+        <li><a href="di-javascript.html">Dependency Injection in JavaScript (Node.js)</a></li>
+    </ul>
+
+    <h2 id="frameworks">6. Frameworks and Tools for Dependency Injection</h2>
+    <p>Several frameworks and tools support DI:</p>
+    <ul>
+        <li>Spring Framework (Java)</li>
+        <li>.NET Core Dependency Injection (C#)</li>
+        <li>Dagger (Java)</li>
+        <li>Guice (Java)</li>
+        <li>Unity Container (C#)</li>
+        <li>Autofac (C#)</li>
+        <li>InversifyJS (JavaScript)</li>
+        <li>Flask-Injector (Python)</li>
+    </ul>
+
+    <h2 id="challenges">7. Common Challenges and Solutions</h2>
+    <p>Common challenges in DI include:</p>
+    <ul>
+        <li>Over-Injection</li>
+        <li>Circular Dependencies</li>
+        <li>Performance Overheads</li>
+    </ul>
+
+    <h2 id="practices">8. Best Practices</h2>
+    <p>Best practices for DI include:</p>
+    <ul>
+        <li>Keep It Simple</li>
+        <li>Use Interfaces</li>
+        <li>Avoid Service Locators</li>
+        <li>Use DI Containers Wisely</li>
+    </ul>
+
+    <h2 id="case-studies">9. Case Studies and Examples</h2>
+    <p>Real-world applications and examples of DI:</p>
+    <ul>
+        <li>Spring Framework (Java)</li>
+        <li>ASP.NET Core (C#)</li>
+        <li>Angular (TypeScript)</li>
+    </ul>
+
+    <h2 id="conclusion">10. Conclusion</h2>
+    <p>Dependency Injection (DI) is a powerful design pattern that promotes loose coupling, enhances testability, and improves maintainability of software systems. By injecting dependencies rather than hard-coding them, developers can create flexible and scalable applications. Understanding the different types of DI, implementing them in various programming languages, and following best practices can significantly improve the quality and manageability of your codebase.</p>
+
+    <p>The trend towards microservices and serverless architectures continues to drive the need for effective DI solutions. As systems become more complex, the importance of modularity and maintainability grows, making DI an essential tool for modern software development. Advances in DI frameworks and tools will likely continue to evolve, offering more efficient and user-friendly ways to manage dependencies in diverse programming environments.</p>
+</body>
+</html>
